@@ -1,0 +1,324 @@
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #fffaf0;
+    color: #3b1d16;
+}
+
+
+/* NAVIGATION BAR */
+
+header {
+    background: #4b1018;
+    padding: 20px 6%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #e7bd65;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #e7bd65;
+}
+
+
+/* HOME SECTION */
+
+.hero {
+    min-height: 600px;
+
+    background:
+    linear-gradient(
+        rgba(40, 10, 10, 0.55),
+        rgba(40, 10, 10, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1510915361894-db8b60106cb1");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px 8%;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.small-title {
+    color: #e7bd65;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #e7bd65;
+}
+
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d4a84f;
+    color: #351016;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+}
+
+
+/* COMMON SECTION */
+
+.section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 34px;
+    color: #681c26;
+    margin-bottom: 25px;
+}
+
+.description {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+
+/* MUSIC CARDS */
+
+.music-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    padding: 35px;
+    border: 1px solid #e4c98e;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #8a4b16;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p {
+    line-height: 1.8;
+}
+
+
+/* INSTRUMENTS */
+
+.instruments {
+    background: #f4e8d0;
+}
+
+.instrument-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.instrument-card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid #b88636;
+    transition: 0.3s;
+}
+
+.instrument-card:hover {
+    transform: translateY(-8px);
+}
+
+.instrument-card h3 {
+    color: #751d28;
+    margin-bottom: 12px;
+}
+
+
+/* ARTISTS */
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.artist-card {
+    background: #4b1018;
+    color: white;
+    padding: 35px 15px;
+    border-radius: 10px;
+}
+
+.artist-card h3 {
+    color: #e7bd65;
+    margin-bottom: 12px;
+}
+
+
+/* MUSIC PLAYER */
+
+.player {
+    background: #f4e8d0;
+}
+
+audio {
+    width: 80%;
+    max-width: 450px;
+    margin-top: 25px;
+}
+
+
+/* CONTACT */
+
+.contact form {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 14px;
+    border: 1px solid #c9a96e;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.contact textarea {
+    height: 120px;
+}
+
+.contact button {
+    background: #681c26;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact button:hover {
+    background: #a34c30;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #4b1018;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    line-height: 2;
+}
+
+footer h2 {
+    color: #e7bd65;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .music-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .instrument-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .artist-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 450px) {
+
+    .instrument-grid,
+    .artist-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
